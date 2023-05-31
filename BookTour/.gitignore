@@ -14,9 +14,7 @@ target/
 .sts4-cache
 
 ### IntelliJ IDEA ###
-application.properties
 .idea
-.idea/
 *.iws
 *.iml
 *.ipr
@@ -33,3 +31,7 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### Additional Ignore ###
+.idea/
+application.properties
