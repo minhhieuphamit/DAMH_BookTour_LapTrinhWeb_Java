@@ -12,8 +12,8 @@ import java.util.List;
 @Repository
 public interface TourRepository extends JpaRepository<Tour, Long> {
     @Query("SELECT t FROM Tour t WHERE t.departure.id = :departurePoint AND t.destination.id = :destinationPoint")
-    public List<Tour> searchTour(@Param("departurePoint") String departurePoint, @Param("destinationPoint") String destinationPoint);
+    List<Tour> searchTour(@Param("departurePoint") String departurePoint, @Param("destinationPoint") String destinationPoint);
 
     @Query("SELECT t FROM Tour t WHERE t.departure.id = :departurePoint AND t.destination.id = :destinationPoint AND t.dateStart = :dateStart AND t.dateEnd = :dateEnd")
-    public List<Tour> searchTour(@Param("departurePoint") String departurePoint, @Param("destinationPoint") String destinationPoint, @Param("dateStart") LocalDate dateStart, @Param("dateEnd") LocalDate dateEnd);
+    List<Tour> searchTour(@Param("departurePoint") String departurePoint, @Param("destinationPoint") String destinationPoint, @Param("dateStart") LocalDate dateStart, @Param("dateEnd") LocalDate dateEnd);
 }
