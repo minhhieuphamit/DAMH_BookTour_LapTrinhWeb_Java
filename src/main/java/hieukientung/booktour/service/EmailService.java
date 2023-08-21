@@ -6,15 +6,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
-public class EmailService {
-    private final EmailRepository emailRepository;
-
-    public EmailService(EmailRepository emailRepository) {
-        this.emailRepository = emailRepository;
-    }
-
-    public List<Email> getAllEmails() {
-        return emailRepository.findAll();
-    }
+public interface EmailService {
+    public List<Email> getAllEmails();
 }
